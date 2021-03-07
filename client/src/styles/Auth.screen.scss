@@ -1,0 +1,156 @@
+@import "global";
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 100%;
+  .logo-container {
+    width: 150px;
+    max-width: 90%;
+    margin-top: 50px;
+    img {
+      width: 100%;
+      cursor: pointer;
+      filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.2))
+
+    }
+  }
+  .auth-box-container {
+    width: 550px;
+    max-width: 90%;
+    background-color: $white;
+    margin: 50px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    .box-header {
+      text-align: center;
+      font-size: 24px;
+      background-color: #6d6d6d80;
+      color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        padding: 10px;
+        font-weight: 500;
+      }
+      .auth-btn {
+        width: 50%;
+        color: $white;
+        font-weight: 600;
+        font-size: 24px;
+        padding: 10px;
+        transition: 0.3s ease;
+        &-active {
+          background-color: $brown;
+        }
+        &:hover {
+          background-color: $black;
+        }
+        &:active {
+          transition: none;
+          background-color: $brown;
+        }
+      }
+    }
+    .box-body {
+      &-flex {
+        display: flex;
+        .right-btn,
+        .left-btn {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 250px;
+          font-size: 26px;
+          color: $white;
+          transition: 0.3s ease;
+        }
+        .right-btn {
+          background-color: $gray;
+          &:hover {
+            background-color: $black;
+          }
+        }
+        .left-btn {
+          background-color: $brown;
+          &:hover {
+            background-color: #151618;
+          }
+        }
+      }
+
+      .box-title {
+        text-align: center;
+        padding-top: 15px;
+        user-select: none;
+        h2,
+        div {
+          display: inline-block;
+          margin-right: 5px;
+        }
+        h2 {
+          color: $brown;
+          cursor: pointer;
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+  .input-items {
+    width: 100%;
+    padding: 20px 30px;
+    .input-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 20px;
+      input {
+        @include Input;
+      }
+      .auth-btn {
+        @include Button;
+        width: 50%;
+      }
+    }
+  }
+  .box-footer {
+    padding-bottom: 30px;
+    .no-account {
+      padding: 0px 30px 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      p {
+        font-size: 18px;
+      }
+      a {
+        @include Button;
+        font-size: 14px;
+        background-color: $gray;
+        margin: 0;
+        padding: 10px 25px;
+        &:hover {
+          background-color: $gray;
+        }
+      }
+    }
+    .go-home {
+      color: $black;
+      transition: 0.2s ease;
+      display: block;
+      text-align: center;
+      &:hover {
+        color: $brown;
+      }
+    }
+  }
+}

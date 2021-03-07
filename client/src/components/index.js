@@ -1,0 +1,12 @@
+export { default as Header } from "./Header";
+export { default as CircleButtons } from "./CircleButtons";
+export { default as LongSlider } from "./LongSlider";
+export { default as RecommendedSlider } from "./RecommendedSlider";
+export { default as OurParteners } from "./OurParteners";
+export { default as Footer } from "./Footer";
+export { default as CartItem } from "./CartItem";
+export { default as Loading } from "./Loading";
+export { default as CategoryItem } from "./CategoryItem";
+export { default as SubCategoryItem } from "./SubCategoryItem";
+export { default as Pagination } from "./Pagination";
+export { default as ReviewItem } from "./ReviewItem";

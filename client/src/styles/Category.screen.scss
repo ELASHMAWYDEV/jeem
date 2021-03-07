@@ -1,0 +1,39 @@
+@import "global";
+
+.category-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & > h1 {
+    color: $gray;
+  }
+  .category-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 5px;
+    width: 100%;
+    .arrow-icon {
+      transform: rotate(90deg);
+      color: $gray;
+    }
+    h2 {
+      font-weight: 600;
+      color: $black;
+    }
+    h3 {
+      color: $gray;
+      font-weight: 500;
+    }
+  }
+  .categories-container {
+    display: grid;
+    padding: 50px 120px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 150px;
+    row-gap: 80px;
+  }
+}

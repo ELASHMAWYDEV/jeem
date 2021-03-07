@@ -1,0 +1,42 @@
+@import "global";
+
+.long-slider {
+  max-height: 400px;
+  .swiper-container {
+    height: 400px;
+    ul {
+      list-style-type: none;
+      img {
+        height: 400px;
+
+      }
+    }
+
+    .next-img,
+    .prev-img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      cursor: pointer;
+      img {
+        width: 40px;
+      }
+    }
+    .next-img {
+      left: 10px;
+    }
+    .prev-img {
+      transform: translateY(-50%) rotate(180deg);
+      right: 10px;
+    }
+  }
+  .slider-slide {
+    width: 100%;
+
+    img {
+      width: 1900px;
+      object-fit: cover;
+    }
+  }
+}

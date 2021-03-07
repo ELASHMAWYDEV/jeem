@@ -1,0 +1,84 @@
+@import "global";
+
+.cart-item-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  height: 150px;
+  .img-container {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    width: 15%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .product-content {
+    margin-left: 30px;
+    width: 40%;
+  }
+  .price,
+  .quantity-container,
+  .subtotal,
+  .delete-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+  }
+  .quantity-container {
+    button {
+      background-color: $brown;
+      border: none;
+      width: 35px;
+      height: 35px;
+      color: $white;
+      font-size: 30px;
+      line-height: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+      cursor: pointer;
+      &:nth-child(1) {
+        margin-right: 10px;
+      }
+      &.plus {
+        margin-left: 10px;
+      }
+      &:hover {
+        opacity: 0.95;
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+  .delete-container {
+    & > div {
+      width: 40px;
+      height: 40px;
+      background-color: $white;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      border: 2px solid rgba(109, 109, 109, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+    img {
+      width: 15px;
+    }
+  }
+}
