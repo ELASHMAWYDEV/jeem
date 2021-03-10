@@ -10,6 +10,7 @@ import {
 } from "../components/index";
 
 //Assets
+// @ts-ignore
 import AvatarImage from "../assets/img/review-pic.jpeg";
 
 const MyAccount = () => {

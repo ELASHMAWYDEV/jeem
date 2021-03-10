@@ -4,7 +4,7 @@ import { RiArrowRightSFill, RiArrowLeftSFill } from "react-icons/ri";
 //Style
 import "../styles/Pagination.scss";
 
-const Pagination = ({ pagesNumber = 5 }) => {
+const Pagination = ({ pagesNumber = 20 }) => {
   const [selectedPage, setSelectedPage] = useState(1);
   const [shownPages, setShownPages] = useState([]);
 

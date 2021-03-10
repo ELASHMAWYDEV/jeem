@@ -12,6 +12,7 @@ import {
   Product,
   MyAccount,
   Auth,
+  Orders,
 } from "./routes/index";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/product" component={Product} />
           <Route path="/myaccount" component={MyAccount} />
           <Route path="/auth" component={Auth} />
+          <Route path="/orders" component={Orders} />
         </Switch>
       </Router>
     </div>
