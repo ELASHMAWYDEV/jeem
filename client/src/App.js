@@ -13,6 +13,7 @@ import {
   MyAccount,
   Auth,
   Orders,
+  Seller,
 } from "./routes/index";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/myaccount" component={MyAccount} />
           <Route path="/auth" component={Auth} />
           <Route path="/orders" component={Orders} />
+          <Route path="/seller" component={Seller} />
         </Switch>
       </Router>
     </div>

@@ -6,3 +6,4 @@ export { default as Product } from "./Product.screen";
 export { default as MyAccount } from "./MyAccount.screen";
 export { default as Auth } from "./Auth.screen";
 export { default as Orders } from "./Orders.screen";
+export { default as Seller } from "./Seller.screen";
