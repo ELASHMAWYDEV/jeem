@@ -5,7 +5,9 @@ import "../styles/Cart.screen.scss";
 
 //Components
 import {
-  Header, Footer, CartItem,
+  Header,
+  Footer,
+  CartItem,
   // Loading
 } from "../components/index";
 
@@ -17,16 +19,20 @@ const MyCart = () => {
       <div className="cart-container">
         <h1>My Cart</h1>
         <div className="cart-box">
-          <div className="cart-header">
-            <h3>Product</h3>
-            <h3>Price</h3>
-            <h3>Quantity</h3>
-            <h3>Subototal</h3>
+          <div className="cart-content">
+            {/* <div> */}
+              <div className="cart-header">
+                <h3>Product</h3>
+                <h3>Price</h3>
+                <h3>Quantity</h3>
+                <h3>Subototal</h3>
+              </div>
+              <span className="line-separator"></span>
+              <CartItem />
+              <CartItem />
+              <CartItem />
+            {/* </div> */}
           </div>
-          <span className="line-separator"></span>
-          <CartItem />
-          <CartItem />
-          <CartItem />
           <span className="line-separator"></span>
           <div className="cart-footer">
             <Link to="/" className="continue-shopping">

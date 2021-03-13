@@ -15,6 +15,7 @@ import {
 import "../styles/Auth.screen.scss";
 
 //Assets
+// @ts-ignore
 import Logo from "../assets/img/logo.png";
 
 const Auth = () => {

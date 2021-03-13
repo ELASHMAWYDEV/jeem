@@ -14,8 +14,7 @@
     img {
       width: 100%;
       cursor: pointer;
-      filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.2))
-
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
     }
   }
   .auth-box-container {
@@ -137,7 +136,6 @@
         font-size: 14px;
         background-color: $gray;
         margin: 0;
-        padding: 10px 25px;
         &:hover {
           background-color: $gray;
         }

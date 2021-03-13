@@ -1,7 +1,7 @@
 //Colors
 $brown: #98694d;
 $gray: #6d6d6d;
-$lightGray: #9E9E9E;
+$lightGray: #9e9e9e;
 $white: #ffffff;
 $black: #000000;
 $yellow: #ffed4b;
@@ -11,12 +11,76 @@ $red: #ff5e57;
 //Fonts
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
 
+//Media Queries
+@mixin media($breakpoint) {
+  @if $breakpoint == phone-sm {
+    @media only screen and (max-width: 360px) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone-lg {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-sm {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-lg {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-sm {
+    @media only screen and (max-width: 1280px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-lg {
+    @media only screen and (max-width: 1920px) {
+      @content;
+    }
+  }
+}
+
+
+/*
+--------------------------
+---To use media queries---
+--------------------------
+
+@include media(desktop-lg) {
+  
+}
+@include media(desktop-sm) {
+
+}
+@include media(tablet-lg) {
+
+}
+@include media(tablet-sm) {
+
+}
+@include media(phone-lg) {
+
+}
+@include media(phone-sm) {
+
+}
+
+*/
+
+
+/*****************************************/
+
 @mixin Input {
   display: inline-block;
   width: 100%;
   border: none;
   border-radius: 10px;
-  padding: 15px 20px;
+  padding: 10px 20px;
   font-size: 16px;
   outline: none;
   border: 1.5px solid transparent;
@@ -31,7 +95,7 @@ $red: #ff5e57;
   border: none;
   outline: none;
   background-color: $brown;
-  padding: 15px 30px;
+  padding: 7px 30px;
   color: $white;
   border-radius: 10px;
   font-size: 20px;
@@ -45,5 +109,20 @@ $red: #ff5e57;
   &:active {
     transition: none;
     transform: scale(0.95);
+  }
+}
+
+
+@mixin box-animate {
+  animation: box 0.3s ease 1;
+}
+@keyframes box {
+  0% {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(unset);
   }
 }
