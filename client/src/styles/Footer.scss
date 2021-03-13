@@ -84,16 +84,6 @@
   }
   /***************************/
   @include media(tablet-sm) {
-    .second-footer {
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column-reverse;
-      gap: 10px;
-    }
-  }
-  /***************************/
-  @include media(phone-lg) {
     .first-footer {
       grid-template-columns: 1fr;
       place-items: center;
@@ -116,12 +106,16 @@
           flex: 1;
           flex-direction: row;
           justify-content: space-evenly;
-          }
+        }
       }
     }
     .second-footer {
       padding: 8px 15px;
-
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column-reverse;
+      gap: 10px;
       .links {
         width: 100%;
         justify-content: space-evenly;
@@ -130,6 +124,9 @@
         }
       }
     }
+  }
+  /***************************/
+  @include media(phone-lg) {
   }
   /***************************/
   @include media(phone-sm) {

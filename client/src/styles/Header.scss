@@ -128,7 +128,7 @@
       margin-right: 20px;
       cursor: pointer;
       transition: 0.2s ease;
-      
+
       &:hover {
         opacity: 0.9;
       }
@@ -139,7 +139,7 @@
       a {
         color: $white;
         font-size: 18px;
-        white-space: nowrap
+        white-space: nowrap;
       }
     }
     .lang-btn-container {
@@ -383,16 +383,26 @@
   }
   /****************************/
   @include media(phone-lg) {
-  }
-  /****************************/
-  @include media(phone-sm) {
     padding: 20px 15px;
     .search-container {
+      position: static;
       margin-inline-end: 15px;
+      .search-bar {
+        width: 100%;
+        right: 0;
+        bottom: unset;
+        top: 100%;
+        &::after {
+          right: 100px;
+        }
+      }
     }
     .cart-icon-container {
       margin-inline-end: 15px;
     }
   }
+}
+/****************************/
+@include media(phone-sm) {
   /****************************/
 }

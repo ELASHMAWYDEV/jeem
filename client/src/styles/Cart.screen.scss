@@ -149,10 +149,12 @@
   @include media(phone-lg) {
     .cart-footer {
       flex-wrap: wrap;
-      gap: 30px;
       align-items: center;
       justify-content: space-between;
       padding: 0;
+      & > div {
+        margin: 5px;
+      }
       .total-container {
         order: 1;
         margin: 0;
@@ -167,7 +169,6 @@
       .continue-shopping {
         order: 2;
       }
-
     }
   }
   /*********************************/

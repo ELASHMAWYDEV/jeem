@@ -31,11 +31,43 @@
   }
   .subcategories-container {
     display: grid;
-    padding: 50px 120px;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 150px;
+    padding: 50px 0px;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
     row-gap: 80px;
     width: 100%;
+  }
 
+  @include media(desktop-lg) {
+  }
+  @include media(desktop-sm) {
+  }
+  @include media(tablet-lg) {
+    .subcategories-container {
+      grid-template-columns: auto;
+      row-gap: 50px;
+    }
+  }
+  @include media(tablet-sm) {
+    .subcategory-header {
+      justify-content: center;
+    }
+  }
+  @include media(phone-lg) {
+  }
+  @include media(phone-sm) {
+    row-gap: 20px;
+    padding: 40px 15px;
+    .subcategories-container {
+      padding-top: 0;
+    }
+    .subcategory-header {
+      h2 {
+        font-size: 18px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+    }
   }
 }

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //Styles
@@ -17,6 +18,7 @@ import {
 } from "./routes/index";
 
 function App() {
+  useEffect(() => {}, []);
   return (
     <div className="App">
       <Router>

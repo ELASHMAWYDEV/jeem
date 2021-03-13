@@ -6,7 +6,7 @@
   box-shadow: 0px 3px 10px rgba($color: $black, $alpha: 0.2);
   position: relative;
   height: 350px;
-  min-width: 350px;
+  width: auto;
   background: linear-gradient(#6d6d6d 60%, #98694d 100%);
   transition: 0.3s ease;
   &:hover {
