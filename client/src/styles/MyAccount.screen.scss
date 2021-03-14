@@ -73,4 +73,44 @@
       font-weight: 400;
     }
   }
+
+  /*****************************/
+  @include media(desktop-lg) {
+  }
+  /*****************************/
+  @include media(desktop-sm) {
+
+  }
+  /*****************************/
+  @include media(tablet-lg) {
+    .info-container {
+      grid-template-columns: 1fr 1fr;
+      padding-top: 30px;
+    }
+  }
+  /*****************************/
+  @include media(tablet-sm) {
+    .img-container {
+      padding: 10px;
+    }
+    .info-container {
+      padding-top: 0px;
+
+    }
+    .myaccount-box {
+
+      flex-direction: column;
+    }
+  }
+  /*****************************/
+  @include media(phone-lg) {
+    padding: 30px 15px;
+    .info-container {
+      grid-template-columns: 1fr;
+    }
+
+  }
+  /*****************************/
+  @include media(phone-sm) {
+  }
 }
