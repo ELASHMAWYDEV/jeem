@@ -18,4 +18,24 @@
     width: 100%;
     padding-bottom: 50px;
   }
+
+  /*****************************/
+  @include media(desktop-lg) {
+
+  }
+  /*****************************/
+  @include media(desktop-sm) {
+  }
+  /*****************************/
+  @include media(tablet-lg) {
+    padding: 30px 15px;
+  }
+  /*****************************/
+  @include media(tablet-sm) {
+  }
+  /*****************************/
+  @include media(phone-lg) {
+  }
+  @include media(phone-sm) {
+  }
 }

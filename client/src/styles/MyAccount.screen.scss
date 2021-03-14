@@ -17,6 +17,7 @@
     border: 2px solid rgba(109, 109, 109, 0.2);
     padding: 15px 30px 30px;
     display: flex;
+    gap: 30px;
     align-items: center;
     position: relative;
   }
@@ -79,12 +80,11 @@
   }
   /*****************************/
   @include media(desktop-sm) {
-
   }
   /*****************************/
   @include media(tablet-lg) {
     .info-container {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:auto auto;
       padding-top: 30px;
     }
   }
@@ -95,10 +95,8 @@
     }
     .info-container {
       padding-top: 0px;
-
     }
     .myaccount-box {
-
       flex-direction: column;
     }
   }
@@ -106,11 +104,14 @@
   @include media(phone-lg) {
     padding: 30px 15px;
     .info-container {
-      grid-template-columns: 1fr;
+      grid-template-columns: auto;
     }
-
   }
   /*****************************/
   @include media(phone-sm) {
+    .myaccount-box {
+      padding: 20px;
+      width: 100%;
+    }
   }
 }
