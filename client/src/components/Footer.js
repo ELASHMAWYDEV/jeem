@@ -26,7 +26,7 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <div className="social-icons">
             <a href="/">
-              <SiFacebook />
+              <SiFacebook className="facebook"/>
             </a>
             <a href="/">
               <AiOutlineTwitter />

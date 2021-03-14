@@ -26,10 +26,22 @@
           width: 50px;
           height: 50px;
           cursor: pointer;
-          color: $white;
+          color: $brown;
           transition: 0.2s ease;
+          background-color: $white;
+          border-radius: 50%;
+          padding: 5px;
           &:hover {
-            color: $black;
+            color: $lightBrown;
+          }
+          &.facebook {
+            padding: 0px;
+            background-color: $brown;
+            background-size: 90%;
+            color: $white;
+            &:hover {
+              background-color: $lightBrown;
+            }
           }
         }
       }
@@ -91,14 +103,7 @@
       align-content: center;
       text-align: center;
       gap: 50px;
-      .contact-us {
-        .social-icons {
-          svg {
-            width: 35px;
-            height: 35px;
-          }
-        }
-      }
+
       .discover {
         margin: 0;
         width: 100%;
