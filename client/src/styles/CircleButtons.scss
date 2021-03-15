@@ -7,7 +7,6 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  max-width: 95%;
   overflow: hidden;
   .btn-circle {
     display: flex;
@@ -47,19 +46,22 @@
   @include media(desktop-sm) {
   }
   @include media(tablet-lg) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 40px;
-    column-gap: 40px;
-    place-items: center;
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 50px 20px;
   }
   @include media(tablet-sm) {
+    .btn-circle {
+      h1 {
+        font-size: 20px;
+      }
+    }
   }
   @include media(phone-lg) {
   }
   @include media(phone-sm) {
-    
     grid-template-columns: 1fr;
   }
 }

@@ -19,8 +19,10 @@
     .contact-us {
       .social-icons {
         display: flex;
+        flex-wrap: wrap;
         margin-top: 10px;
         align-items: center;
+        justify-content: center;
         gap: 30px;
         svg {
           width: 50px;
