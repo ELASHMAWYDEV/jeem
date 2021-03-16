@@ -1,4 +1,3 @@
-
 //Styles
 import "../styles/Home.screen.scss";
 
@@ -10,7 +9,8 @@ import {
   OurParteners,
   Footer,
   LongSlider,
-  Loading
+  Loading,
+  TabSlider,
 } from "../components/index";
 
 const Home = () => {
@@ -21,7 +21,14 @@ const Home = () => {
       <div className="home">
         <LongSlider />
         <CircleButtons />
-        <RecommendedSlider />
+        {/* <RecommendedSlider /> */}
+        <div className="tab-sliders-wrapper">
+          <TabSlider />
+          <TabSlider />
+          <TabSlider />
+          <TabSlider />
+        </div>
+
         <OurParteners />
         <Footer />
       </div>

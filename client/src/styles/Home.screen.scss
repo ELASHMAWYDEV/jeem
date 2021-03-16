@@ -3,4 +3,11 @@
 .home {
   display: flex;
   flex-direction: column;
+  .tab-sliders-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 0 15px;
+  }
 }

@@ -11,3 +11,4 @@ export { default as SubCategoryItem } from "./SubCategoryItem";
 export { default as Pagination } from "./Pagination";
 export { default as ReviewItem } from "./ReviewItem";
 export { default as OrderBox } from "./OrderBox";
+export { default as TabSlider } from "./TabSlider";
