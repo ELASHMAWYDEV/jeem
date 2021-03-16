@@ -11,6 +11,7 @@ import {
   LongSlider,
   Loading,
   TabSlider,
+  RectSlider,
 } from "../components/index";
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <div className="home">
         <LongSlider />
         <CircleButtons />
+        <div className="dash-line" />
         {/* <RecommendedSlider /> */}
         <div className="tab-sliders-wrapper">
           <TabSlider />
@@ -28,8 +30,20 @@ const Home = () => {
           <TabSlider />
           <TabSlider />
         </div>
-
+        <div className="dash-line" />
+        <RectSlider />
+        <div className="dash-line" />
         <OurParteners />
+        <div className="dash-line" />
+        <RectSlider />
+        <div className="dash-line" />
+        <div className="tab-sliders-wrapper">
+          <TabSlider />
+          <TabSlider />
+          <TabSlider />
+          <TabSlider />
+        </div>
+        <div className="dash-line" />
         <Footer />
       </div>
     </>

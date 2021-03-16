@@ -7,7 +7,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 90px;
-    background-color: $brown;
+    background: linear-gradient(
+      150deg,
+      rgba($color: $brown, $alpha: 1) 0%,
+      rgba($color: $lightBrown, $alpha: 1) 100%
+    );
     color: $white;
     padding: 30px;
     & > div > h3 {

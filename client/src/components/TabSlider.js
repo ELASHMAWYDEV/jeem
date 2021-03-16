@@ -19,6 +19,7 @@ const TabSlider = () => {
       <Swiper
         className="slider-container"
         autoplay={{ delay: Math.floor(Math.random() * 5000) + 2000 }}
+        loop={true}
         pagination={{
           clickable: true,
           bulletClass: "tabs-slider-tab",

@@ -12,3 +12,5 @@ export { default as Pagination } from "./Pagination";
 export { default as ReviewItem } from "./ReviewItem";
 export { default as OrderBox } from "./OrderBox";
 export { default as TabSlider } from "./TabSlider";
+export { default as RectSlider } from "./RectSlider";
+export { default as RectProduct } from "./RectProduct";
