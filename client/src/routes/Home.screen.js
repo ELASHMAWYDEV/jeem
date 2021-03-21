@@ -17,7 +17,7 @@ import {
 const Home = () => {
   return (
     <>
-      <Loading />
+      {/* <Loading /> */}
       <Header />
       <div className="home">
         <LongSlider />

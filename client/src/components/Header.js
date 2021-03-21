@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { ImSearch } from "react-icons/im";
 import { HiMenu } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { MdNotifications } from "react-icons/md";
+
+//Components
+import { NotificationsBox } from "./";
 
 //Styles
 import "../styles/Header.scss";
@@ -20,6 +24,7 @@ const Header = () => {
   const [searchBarVisible, setSearchBarVisible] = useState(false);
   const [bntsContainerVisible, setBntsContainerVisible] = useState(false);
   const [navContainerVisible, setNavContainerVisible] = useState(false);
+  const [notificationActive, setNotificationActive] = useState(false);
 
   const searchBarRef = useRef(null);
   const btnsContainerRef = useRef(null);
@@ -57,9 +62,9 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className="logo-container">
+      <Link to="/" className="logo-container">
         <img src={Logo} alt="Jeem Logo" />
-      </div>
+      </Link>
       <div
         ref={navContainerRef}
         className={`nav-container${navContainerVisible ? " visible" : ""}`}
@@ -79,6 +84,13 @@ const Header = () => {
           Traders
           <span></span>
         </a>
+      </div>
+      <div
+        className="notification-icon-container"
+        onClick={() => setNotificationActive(!notificationActive)}
+      >
+        <MdNotifications className="notification-icon" />
+        <NotificationsBox active={notificationActive} />
       </div>
       <Link to="/cart" className="cart-icon-container">
         <div className="number-on-cart">2</div>

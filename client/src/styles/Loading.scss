@@ -2,7 +2,7 @@
 
 .loading-container {
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
@@ -19,7 +19,7 @@
     overflow: hidden;
   }
   .left-rect {
-    background-color: $brown;
+    background-color: $primary;
     animation: goLeft 1.5s 1.5s 1 ease;
   }
   .right-rect {

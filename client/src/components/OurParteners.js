@@ -6,8 +6,9 @@ import "swiper/swiper-bundle.min.css";
 //Styles
 import "../styles/OurParteners.scss";
 
-//Assets 
+//Assets
 import NextImage from "../assets/img/next.png";
+import SliderImage from "../assets/img/order-img.png";
 
 const OurParteners = () => {
   SwiperCore.use([Navigation, Pagination]);
@@ -17,7 +18,9 @@ const OurParteners = () => {
   for (let i = 0; i <= 20; i++) {
     slides.push(
       <SwiperSlide>
-        <div className="partener"></div>
+        <div className="partener">
+          <img src={SliderImage} alt="" />
+        </div>
       </SwiperSlide>
     );
   }
@@ -31,18 +34,44 @@ const OurParteners = () => {
         slidesPerView={8}
         tag="section"
         wrapperTag="ul"
+        parallax={true}
         navigation={{
           prevEl: ".next-partener",
           nextEl: ".prev-partener",
         }}
         pagination
+        breakpoints={{
+          1280: {
+            slidesPerView: 10,
+          },
+          1024: {
+            slidesPerView: 7,
+          },
+          768: {
+            slidesPerView: 5,
+          },
+          520: {
+            slidesPerView: 3.5,
+          },
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+          360: {
+            slidesPerView: 2.2,
+          },
+          100: {
+            slidesPerView: 1.5,
+            spaceBetween: 50,
+          },
+        }}
       >
         {slides}
         <div className="prev-partener">
-          <img src={NextImage} alt="previous"/>
+          <img src={NextImage} alt="previous" />
         </div>
         <div className="next-partener">
-          <img src={NextImage} alt="next"/>
+          <img src={NextImage} alt="next" />
         </div>
       </Swiper>
     </div>

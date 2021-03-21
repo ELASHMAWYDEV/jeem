@@ -14,3 +14,5 @@ export { default as OrderBox } from "./OrderBox";
 export { default as TabSlider } from "./TabSlider";
 export { default as RectSlider } from "./RectSlider";
 export { default as RectProduct } from "./RectProduct";
+export { default as NotificationsBox } from "./NotificationsBox";
+export { default as ColorPicker } from "./ColorPicker";

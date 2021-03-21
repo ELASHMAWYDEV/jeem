@@ -191,6 +191,110 @@ const Auth = () => {
             </div>
           </div>
         </Route>
+
+        {/*-------------Reset Password START-------------*/}
+
+        <Route exact path={`${path}/reset-password`}>
+          <div className="box-body">
+            <div className="box-title">
+              <h3>We will send reset link to your email</h3>
+            </div>
+            <div className="input-items">
+              <div className="input-item">
+                <input type="email" placeholder="Email" />
+              </div>
+
+              <div className="input-item">
+                <Link
+                  to={`${path}/reset-password/sc56as7df4asd`}
+                  className="auth-btn"
+                >
+                  Send Link
+                </Link>
+              </div>
+            </div>
+            <div className="box-footer">
+              <div className="no-account">
+                <p>You remember the password already</p>
+                <Link to={`${path}/${type}/login`}>Login</Link>
+              </div>
+              <Link to="/" className="go-home">
+                Go to home page
+              </Link>
+            </div>
+          </div>
+        </Route>
+
+        {/*-------------Enter New Password START-------------*/}
+
+        <Route path={`${path}/reset-password/:token`}>
+          <div className="box-body">
+            <div className="box-title">
+              <h3>Please enter the new password</h3>
+            </div>
+            <div className="input-items">
+              <div className="input-item">
+                <input type="password" placeholder="New password" />
+              </div>
+              <div className="input-item">
+                <input type="password" placeholder="Confirm new password" />
+              </div>
+
+              <div className="input-item">
+                <button className="auth-btn">Change Password</button>
+              </div>
+            </div>
+            <div className="box-footer">
+              <Link to="/" className="go-home">
+                Go to home page
+              </Link>
+            </div>
+          </div>
+        </Route>
+
+        {/*-------------OTP START-------------*/}
+        <Route path={`${path}/otp`}>
+          <div className="box-body">
+            <div className="box-title">
+              <h3>Please enter the OTP you received on your phone number</h3>
+            </div>
+            <div className="input-items">
+              <div className="input-item">
+                <input type="text" placeholder="OTP" />
+              </div>
+
+              <div className="input-item">
+                <button className="auth-btn">Continue</button>
+              </div>
+            </div>
+            <div className="box-footer">
+              <Link to="/" className="go-home">
+                Go to home page
+              </Link>
+            </div>
+          </div>
+        </Route>
+
+        {/*-------------Email Verified START-------------*/}
+
+        <Route exact path={`${path}/verify-email/:token`}>
+          <div className="box-body">
+            <div className="box-title">
+              <h1>Your email was verified successfully</h1>
+              <h2>elashmawydev@gmail.com</h2>
+            </div>
+            <div className="input-items">
+              <div className="input-item">
+                <button className="auth-btn">Continue</button>
+              </div>
+            </div>
+            <div className="box-footer">
+              <Link to="/" className="go-home">
+                Go to home page
+              </Link>
+            </div>
+          </div>
+        </Route>
       </div>
 
       {/*-------------Box Body END-------------*/}

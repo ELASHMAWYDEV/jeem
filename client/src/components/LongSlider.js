@@ -28,37 +28,80 @@ const LongSlider = () => {
       >
         <SwiperSlide tag="li">
           <div className="slider-slide">
+            <div className="slide-bg"></div>
             <a href="/" onClick={(e) => e.preventDefault()}>
+              <div className="over-img-txt">
+                <h1>Jeem Building Solutions</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime mollitia, molestiae quas vel sint commodi repudiandae
+                  consequuntur voluptatum laborum numquam blanditiis harum
+                  quisquam eius sed odit fugiat iusto fuga praesentium
+                </p>
+              </div>
               <img src={SliderImage1} alt="" />
             </a>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slider-slide">
+            <div className="slide-bg"></div>
+
             <a href="/" onClick={(e) => e.preventDefault()}>
+              <div className="over-img-txt">
+                <h1>Jeem Building Solutions</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime mollitia, molestiae quas vel sint commodi repudiandae
+                  consequuntur voluptatum laborum numquam blanditiis harum
+                  quisquam eius sed odit fugiat iusto fuga praesentium
+                </p>
+              </div>
               <img src={SliderImage2} alt="" />
             </a>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slider-slide">
+            <div className="slide-bg"></div>
+
             <a href="/" onClick={(e) => e.preventDefault()}>
+              <div className="over-img-txt">
+                <h1>Jeem Building Solutions</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime mollitia, molestiae quas vel sint commodi repudiandae
+                  consequuntur voluptatum laborum numquam blanditiis harum
+                  quisquam eius sed odit fugiat iusto fuga praesentium
+                </p>
+              </div>
               <img src={SliderImage3} alt="" />
             </a>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slider-slide">
+            <div className="slide-bg"></div>
+
             <a href="/" onClick={(e) => e.preventDefault()}>
+              <div className="over-img-txt">
+                <h1>Jeem Building Solutions</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime mollitia, molestiae quas vel sint commodi repudiandae
+                  consequuntur voluptatum laborum numquam blanditiis harum
+                  quisquam eius sed odit fugiat iusto fuga praesentium
+                </p>
+              </div>
               <img src={SliderImage1} alt="" />
             </a>
           </div>
         </SwiperSlide>
         <div className="prev-img">
-          <img src={NextImage} alt=""/>
+          <img src={NextImage} alt="" />
         </div>
         <div className="next-img">
-          <img src={NextImage} alt=""/>
+          <img src={NextImage} alt="" />
         </div>
       </Swiper>
     </div>

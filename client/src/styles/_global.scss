@@ -1,6 +1,7 @@
+
 //Colors
-$brown: #8d644b;
-$lightBrown: #e0c389;
+$primary: var(--primary);
+$secondary: var(--secondary);
 $gray: #707271;
 $lightGray: #9e9e9e;
 $white: #ffffff;
@@ -8,6 +9,7 @@ $black: #000000;
 $yellow: #ffed4b;
 $green: #2ecc71;
 $red: #ff5e57;
+
 
 //Fonts
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
@@ -74,6 +76,21 @@ $red: #ff5e57;
 
 /*****************************************/
 
+//scrollbar style
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-track {
+  background-color: $white;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  border-radius: 10px;
+}
+
+/*****************************************/
+
 @mixin Input {
   display: inline-block;
   width: 100%;
@@ -86,14 +103,14 @@ $red: #ff5e57;
   transition: 0.2s ease;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   &:focus {
-    border: 1.5px solid $brown;
+    border: 1.5px solid $primary;
   }
 }
 
 @mixin Button {
   border: none;
   outline: none;
-  background-color: $brown;
+  background-color: $primary;
   padding: 7px 30px;
   color: $white;
   border-radius: 10px;
@@ -103,7 +120,7 @@ $red: #ff5e57;
   cursor: pointer;
   transition: 0.2s ease;
   &:hover {
-    background-color: $brown;
+    background-color: $primary;
   }
   &:active {
     transition: none;
@@ -121,6 +138,6 @@ $red: #ff5e57;
   }
   100% {
     opacity: 1;
-    transform: translateY(unset);
+    transform: translateY(0px);
   }
 }

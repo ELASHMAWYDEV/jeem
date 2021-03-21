@@ -1,3 +1,8 @@
+:root {
+  --primary: #425970;
+  --secondary: rgba(1, 57, 94, 1);
+}
+
 @import "global";
 
 body {
@@ -21,5 +26,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  & > div:nth-last-child(1) {
+    padding-top: 120px;
+  }
 }
 
