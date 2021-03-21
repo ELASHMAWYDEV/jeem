@@ -1,7 +1,3 @@
-:root {
-  --primary: #425970;
-  --secondary: rgba(1, 57, 94, 1);
-}
 
 @import "global";
 
@@ -20,9 +16,12 @@ body {
   -webkit-tap-highlight-color: transparent;
   outline: none;
 
+
+
 }
 
 .App {
+  
   display: flex;
   flex-direction: column;
   min-height: 100vh;

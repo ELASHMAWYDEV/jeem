@@ -14,7 +14,7 @@ const ColorPicker = () => {
 
   return (
     <div className="color-picker-container">
-      <div className="picker-btn" onClick={() => setVisible(!visible)}></div>
+      <div className="picker-btn" onClick={() => setVisible(!visible)} title="Pick a Color"></div>
       <div className={`colors-container ${visible ? "active" : ""}`}>
         <div className="picker-circle">
           <div

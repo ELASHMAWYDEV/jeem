@@ -1,7 +1,11 @@
 
+// @function v($var) {
+//   @return var(--#{$var});
+// }
+
 //Colors
-$primary: var(--primary);
-$secondary: var(--secondary);
+$primary: #425978;
+$secondary: #01395e;
 $gray: #707271;
 $lightGray: #9e9e9e;
 $white: #ffffff;
@@ -9,7 +13,6 @@ $black: #000000;
 $yellow: #ffed4b;
 $green: #2ecc71;
 $red: #ff5e57;
-
 
 //Fonts
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");

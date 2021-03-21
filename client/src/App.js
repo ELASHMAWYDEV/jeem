@@ -25,6 +25,10 @@ function App() {
     
     document.documentElement.style
     .setProperty('--primary', '#425978');
+    document.documentElement.style
+    .setProperty('--secondary', '#01395e');
+    document.documentElement.style
+    .setProperty('--swiper-theme-color', '#425978');
     console.log(
       getComputedStyle(document.documentElement).getPropertyValue("--primary")
     );
