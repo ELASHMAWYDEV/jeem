@@ -4,29 +4,26 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { SiFacebook } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 //Styles
 import "../styles/Footer.scss";
 
 const Footer = () => {
+  const { t, i18n } = useTranslation("translations");
+
   return (
     <div className="footer-container">
       <div className="first-footer">
         <div className="about-us">
-          <h3>About Us</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
-            Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu
-            venenatis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Quisque nisl eros.
-          </p>
+          <h3>{t("ABOUT_US")}</h3>
+          <p>{t("LOREM_IPSUM")}</p>
         </div>
         <div className="contact-us">
-          <h3>Contact Us</h3>
+          <h3>{t("CONTACT_US")}</h3>
           <div className="social-icons">
             <a href="/">
-              <SiFacebook className="facebook"/>
+              <SiFacebook className="facebook" />
             </a>
             <a href="/">
               <AiOutlineTwitter />
@@ -40,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="discover">
-          <h3>Discover</h3>
+          <h3>{t("DISCOVER")}</h3>
           <div className="links">
             <a href="/" onClick={(e) => e.preventDefault()}>
               Link 1
@@ -58,18 +55,16 @@ const Footer = () => {
         </div>
       </div>
       <div className="second-footer">
-        <div className="copyright">
-          Copyright © 2020 Jeem Building Solutions
-        </div>
+        <div className="copyright">{t("COPYRIGHT")}</div>
         <div className="links">
           <a href="/" onClick={(e) => e.preventDefault()}>
-            Home
+            {t("HOME")}
           </a>
           <a href="/" onClick={(e) => e.preventDefault()}>
-            Privacy Policy
+            {t("PRIVACY_POLICY")}
           </a>
           <a href="/" onClick={(e) => e.preventDefault()}>
-            Terms of Services
+            {t("TERMS_OF_SERVICES")}
           </a>
         </div>
       </div>

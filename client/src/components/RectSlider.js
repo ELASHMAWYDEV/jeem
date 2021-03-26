@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Parallax } from "swiper";
+import { useTranslation } from "react-i18next";
 
 //Components
 import { SubCategoryItem, RectProduct } from "./";
@@ -11,6 +12,8 @@ import "../styles/RectSlider.scss";
 SwiperCore.use([Autoplay, Parallax]);
 
 const RectSlider = () => {
+  const { i18n } = useTranslation("translations");
+
   const [activeSlide, setActiveSlide] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(5);
 
@@ -63,6 +66,7 @@ const RectSlider = () => {
         className="rects-slider"
         spaceBetween={100}
         parallax={true}
+        dir={i18n.dir()}
         breakpoints={{
           1280: {
             slidesPerView: 5,

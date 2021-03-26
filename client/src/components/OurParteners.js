@@ -1,16 +1,22 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
-import "swiper/swiper-bundle.css";
-import "swiper/swiper-bundle.min.css";
+import { useTranslation } from "react-i18next";
 
 //Styles
 import "../styles/OurParteners.scss";
+import "swiper/swiper-bundle.css";
+import "swiper/swiper-bundle.min.css";
 
 //Assets
+// @ts-ignore
 import NextImage from "../assets/img/next.png";
+// @ts-ignore
 import SliderImage from "../assets/img/order-img.png";
 
 const OurParteners = () => {
+  // @ts-ignore
+  const { t, i18n } = useTranslation("translations");
+
   SwiperCore.use([Navigation, Pagination]);
 
   let slides = [];
@@ -28,7 +34,8 @@ const OurParteners = () => {
   return (
     <div className="our-parteners">
       <h1>
-        Our Parteners<span></span>
+        {t("OUR_PARTNERS")}
+        <span></span>
       </h1>
       <Swiper
         slidesPerView={8}
@@ -40,6 +47,7 @@ const OurParteners = () => {
           nextEl: ".prev-partener",
         }}
         pagination
+        dir={i18n.dir()}
         breakpoints={{
           1280: {
             slidesPerView: 10,

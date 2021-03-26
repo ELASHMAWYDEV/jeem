@@ -4,6 +4,7 @@ import { useState } from "react";
 import "../styles/Loading.scss";
 
 //Assets
+// @ts-ignore
 import Logo from "../assets/img/loading-logo.png";
 
 const Loading = () => {

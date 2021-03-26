@@ -97,8 +97,8 @@ const Seller = () => {
           </div>
           <Pagination />
         </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };

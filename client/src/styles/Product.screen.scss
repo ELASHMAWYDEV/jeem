@@ -151,6 +151,11 @@
         outline: none;
         cursor: pointer;
         font-size: 24px;
+        display: flex;
+        align-items: center;
+        svg {
+          margin-inline-start: 20px;
+        }
         &:hover {
           background: linear-gradient(90deg, $black -80%, $green 100%);
         }

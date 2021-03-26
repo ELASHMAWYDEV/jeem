@@ -68,13 +68,13 @@
       white-space: nowrap;
       background-color: $primary;
       position: relative;
-      padding: 5px 15px;
+      padding: 5px 25px;
       color: $white;
       font-size: 18px;
       font-weight: 600;
       height: max-content;
       border-radius: 10px;
-      padding-left: 35px;
+      padding-inline-start: 45px;
       border: inherit;
       box-shadow: inherit;
       &:hover {
@@ -91,8 +91,8 @@
     }
     .checkout-btn {
       background-color: #2ecc71;
-      padding-left: 15px;
-      padding-right: 35px;
+      padding-inline-start: 25px;
+      padding-inline-end: 45px;
       span {
         border-right: 8px solid transparent;
         border-left: 16px solid $white;
@@ -112,7 +112,7 @@
       }
       h4 {
         font-size: 24px;
-        margin-left: 15px;
+        margin-inline-start: 15px;
       }
     }
   }

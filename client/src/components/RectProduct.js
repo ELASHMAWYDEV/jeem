@@ -1,4 +1,5 @@
 import { IoMdStar } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 //Style
 import "../styles/RectProduct.scss";
@@ -8,6 +9,8 @@ import "../styles/RectProduct.scss";
 import SubCategoryImage from "../assets/img/subcategory-img.png";
 
 const RectProduct = ({ active = false }) => {
+  const { t, i18n } = useTranslation("translations");
+
   return (
     <div className={`rect-product-container ${active ? "active" : ""}`}>
       <div className="stars">
@@ -18,12 +21,8 @@ const RectProduct = ({ active = false }) => {
         <IoMdStar />
       </div>
       <div className="info-container">
-        <h1 className="title">Carmela Hand</h1>
-        <h5 className="description">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis
-        </h5>
+        <h1 className="title">{t("PRODUCT_TITLE")}</h1>
+        <h5 className="description">{t("LOREM_IPSUM")}</h5>
       </div>
       <div className="img-container">
         <img src={SubCategoryImage} alt="Sub Category" />

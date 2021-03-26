@@ -1,8 +1,7 @@
 @import "global";
 
 .tab-slider-container {
-  width: 700px;
-
+  width: auto;
   background: linear-gradient(-90deg, $secondary -10%, $primary 100%);
   border-radius: 12px;
   overflow: hidden;
@@ -29,7 +28,6 @@
     }
     .swiper-pagination {
       display: flex;
-      gap: 20px;
       justify-content: center;
       position: absolute;
       bottom: -40px;
@@ -37,6 +35,10 @@
       left: 35%;
       width: 60%;
       .tabs-slider-tab {
+        margin-inline-end: 20px;
+        &:nth-child(1) {
+          margin-inline-end: 0px;
+        }
         cursor: pointer;
         flex: 1;
         max-width: 70px;
@@ -82,7 +84,6 @@
       margin-top: 30px;
       & > h2 {
         text-align: center;
-        
       }
     }
   }

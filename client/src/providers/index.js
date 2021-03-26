@@ -5,15 +5,17 @@ export const useAppContext = () => useContext(AppContext);
 
 export const AppProvider = ({ children }) => {
   const [activeColor, setActiveColor] = useState("blue");
-  const globalColors = {
-    blue: ["#425970", "rgba(1, 57, 94, 1)"],
-    red: [],
+  const globalThemes = {
+    blue: { primary: "#425970", secondary: "rgba(1, 57, 94, 1)" },
+    red: { primary: "#425970", secondary: "rgba(1, 57, 94, 1)" },
+    green: { primary: "#425970", secondary: "rgba(1, 57, 94, 1)" },
+    black: { primary: "#425970", secondary: "rgba(1, 57, 94, 1)" },
   };
 
   useEffect(() => {
     localStorage.setItem(
       "primaryColor",
-      globalColors[activeColor][0] || globalColors.blue[0]
+      globalThemes[activeColor].primary || globalThemes.blue.primary
     );
   }, [activeColor]);
 

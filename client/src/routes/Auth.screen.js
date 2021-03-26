@@ -7,6 +7,7 @@ import {
   useHistory,
   // Redirect,
 } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 //Helpers
 // import { useAuthContext } from "../helpers/AppProvider";
@@ -19,6 +20,8 @@ import "../styles/Auth.screen.scss";
 import Logo from "../assets/img/logo.png";
 
 const Auth = () => {
+  const { t } = useTranslation("translations");
+
   // const { isLoggedIn, setIsLoggedIn } = useAuthContext();
 
   const { path } = useRouteMatch();
@@ -51,7 +54,7 @@ const Auth = () => {
 
         <div className="box-header">
           <Route exact path={path}>
-            <h3>Who are you ?</h3>
+            <h3>{t("WHO_ARE_YOU")}</h3>
           </Route>
           <Route path={[`${path}/customer`, `${path}/vendor`]}>
             <Link
@@ -64,7 +67,7 @@ const Auth = () => {
                   : ""
               }`}
             >
-              Login
+              {t("LOGIN")}
             </Link>
             <Link
               to={`${path}/${type}/register`}
@@ -77,7 +80,7 @@ const Auth = () => {
                   : ""
               }`}
             >
-              Sign up
+              {t("SIGNUP")}
             </Link>
           </Route>
         </div>
@@ -89,10 +92,10 @@ const Auth = () => {
         <Route exact path={path}>
           <div className="box-body-flex">
             <Link to={`${path}/customer/login`} className="right-btn">
-              Customer
+              {t("CUSTOMER")}
             </Link>
             <Link to={`${path}/vendor/login`} className="left-btn">
-              Seller
+              {t("SELLER")}
             </Link>
           </div>
         </Route>
@@ -101,7 +104,7 @@ const Auth = () => {
           <div className="box-body">
             <div className="box-title">
               <div>
-                I'm a {"  "}
+                {t("IAM")} {"  "}
                 <h2
                   onClick={() =>
                     history.push(
@@ -111,16 +114,16 @@ const Auth = () => {
                     )
                   }
                 >
-                  {type === "customer" ? "Customer" : "Seller"}
+                  {type === "customer" ? t("CUSTOMER") : t("SELLER")}
                 </h2>
               </div>
             </div>
             <div className="input-items">
               <div className="input-item">
-                <input type="text" placeholder="Email" />
+                <input type="text" placeholder={t("EMAIL")} />
               </div>
               <div className="input-item">
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder={t("PASSWORD")} />
               </div>
               <div className="input-item">
                 <button
@@ -129,17 +132,23 @@ const Auth = () => {
                     // setIsLoggedIn(true);
                   }}
                 >
-                  Login
+                  {t("LOGIN")}
                 </button>
               </div>
             </div>
             <div className="box-footer">
               <div className="no-account">
-                <p>Don't have an account ?</p>
-                <Link to={`${path}/${type}/register`}>Register</Link>
+                <p>{t("DONT_HAVE_ACCOUNT")}</p>
+                <Link to={`${path}/${type}/register`}>{t("REGISTER")}</Link>
+              </div>
+              <div className="no-account">
+                <p>{t("FORGOT_PASSWORD")}</p>
+                <Link to={`${path}/reset-password`}>
+                  {t("RESET_PASSWORD")}
+                </Link>
               </div>
               <Link to="/" className="go-home">
-                Go to home page
+                {t("GO_HOME_PAGE")}
               </Link>
             </div>
           </div>
@@ -149,7 +158,7 @@ const Auth = () => {
           <div className="box-body">
             <div className="box-title">
               <div>
-                I'm a {"  "}
+                {t("IAM")} {"  "}
                 <h2
                   onClick={() =>
                     history.push(
@@ -159,49 +168,49 @@ const Auth = () => {
                     )
                   }
                 >
-                  {type === "customer" ? "Customer" : "Seller"}
+                  {type === "customer" ? t("CUSTOMER") : t("SELLER")}
                 </h2>
               </div>
             </div>
             <div className="input-items">
               <div className="input-item">
-                <input type="text" placeholder="Name" />
+                <input type="text" placeholder={t("NAME")} />
               </div>
               <div className="input-item">
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder={t("EMAIL")} />
               </div>
               <div className="input-item">
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder={t("PASSWORD")} />
               </div>
               <div className="input-item">
-                <input type="password" placeholder="Confirm Password" />
+                <input type="password" placeholder={t("CONFIRM_PASSWORD")} />
               </div>
               <div className="input-item">
-                <button className="auth-btn">Register</button>
+                <button className="auth-btn">{t("REGISTER")}</button>
               </div>
             </div>
             <div className="box-footer">
               <div className="no-account">
-                <p>Don't have an account</p>
-                <Link to={`${path}/${type}/login`}>Login</Link>
+                <p>{t("DONT_HAVE_ACCOUNT")}</p>
+                <Link to={`${path}/${type}/login`}>{t("LOGIN")}</Link>
               </div>
               <Link to="/" className="go-home">
-                Go to home page
+                {t("GO_HOME_PAGE")}
               </Link>
             </div>
           </div>
         </Route>
 
-        {/*-------------Reset Password START-------------*/}
+        {/*-------------Reset START-------------*/}
 
         <Route exact path={`${path}/reset-password`}>
           <div className="box-body">
             <div className="box-title">
-              <h3>We will send reset link to your email</h3>
+              <h3>{t("SEND_RESET_LINK_TO_EMAIL")}</h3>
             </div>
             <div className="input-items">
               <div className="input-item">
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder={t("EMAIL")} />
               </div>
 
               <div className="input-item">
@@ -209,44 +218,44 @@ const Auth = () => {
                   to={`${path}/reset-password/sc56as7df4asd`}
                   className="auth-btn"
                 >
-                  Send Link
+                  {t("SEND_LINK")}
                 </Link>
               </div>
             </div>
             <div className="box-footer">
               <div className="no-account">
-                <p>You remember the password already</p>
-                <Link to={`${path}/${type}/login`}>Login</Link>
+                <p>{t("YOU_REMEMBER_PASSWORD")}</p>
+                <Link to={`${path}/${type}/login`}>{t("LOGIN")}</Link>
               </div>
               <Link to="/" className="go-home">
-                Go to home page
+                {t("GO_HOME_PAGE")}
               </Link>
             </div>
           </div>
         </Route>
 
-        {/*-------------Enter New Password START-------------*/}
+        {/*-------------Enter New START-------------*/}
 
         <Route path={`${path}/reset-password/:token`}>
           <div className="box-body">
             <div className="box-title">
-              <h3>Please enter the new password</h3>
+              <h3>{t("ENTER_NEW_PASSWORD")}</h3>
             </div>
             <div className="input-items">
               <div className="input-item">
-                <input type="password" placeholder="New password" />
+                <input type="password" placeholder={t("PASSWORD")} />
               </div>
               <div className="input-item">
-                <input type="password" placeholder="Confirm new password" />
+                <input type="password" placeholder={t("CONFIRM_PASSWORD")} />
               </div>
 
               <div className="input-item">
-                <button className="auth-btn">Change Password</button>
+                <button className="auth-btn">{t("CHANGE_PASSWORD")}</button>
               </div>
             </div>
             <div className="box-footer">
               <Link to="/" className="go-home">
-                Go to home page
+                {t("GO_HOME_PAGE")}
               </Link>
             </div>
           </div>
@@ -269,13 +278,13 @@ const Auth = () => {
             </div>
             <div className="box-footer">
               <Link to="/" className="go-home">
-                Go to home page
+                {t("GO_HOME_PAGE")}
               </Link>
             </div>
           </div>
         </Route>
 
-        {/*-------------Email Verified START-------------*/}
+        {/*------------{t('EMAIL')}Verified START-------------*/}
 
         <Route exact path={`${path}/verify-email/:token`}>
           <div className="box-body">
@@ -290,7 +299,7 @@ const Auth = () => {
             </div>
             <div className="box-footer">
               <Link to="/" className="go-home">
-                Go to home page
+                {t("GO_HOME_PAGE")}
               </Link>
             </div>
           </div>

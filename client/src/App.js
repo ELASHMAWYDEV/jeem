@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 //Components
 import { ColorPicker } from "./components";
 
 //Styles
 import "./styles/App.scss";
+import "./styles/rtl.scss";
 
 //Routes
 import {
@@ -21,14 +23,25 @@ import {
 } from "./routes/index";
 
 function App() {
+  const { i18n } = useTranslation();
+
   useEffect(() => {
-    
-    document.documentElement.style
-    .setProperty('--primary', '#425978');
-    document.documentElement.style
-    .setProperty('--secondary', '#01395e');
-    document.documentElement.style
-    .setProperty('--swiper-theme-color', '#425978');
+    //Localization
+    document.dir = i18n.dir(i18n.language);
+    if (i18n.language == "ar")
+      document.getElementsByTagName("body")[0].classList.add("rtl-layout");
+    else
+      document.getElementsByTagName("body")[0].classList.remove("rtl-layout");
+    i18n.on("languageChanged", (lang) => {
+      window.location.reload();
+    });
+
+    document.documentElement.style.setProperty("--primary", "#425978");
+    document.documentElement.style.setProperty("--secondary", "#01395e");
+    document.documentElement.style.setProperty(
+      "--swiper-theme-color",
+      "#425978"
+    );
     console.log(
       getComputedStyle(document.documentElement).getPropertyValue("--primary")
     );

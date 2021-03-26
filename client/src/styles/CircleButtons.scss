@@ -13,10 +13,12 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 15px 0;
-    width: 200px;
-    height: 200px;
-    border-radius: calc(200px / 2);
+    padding: 20px 10px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    min-height: 100px;
+    min-width: 100px;
     background: rgb(109, 109, 109);
     background: linear-gradient(
       159deg,
@@ -49,8 +51,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 20px;
     padding: 50px 20px;
+    .btn-circle {
+      margin-bottom: 30px;
+    }
   }
   @include media(tablet-sm) {
     .btn-circle {

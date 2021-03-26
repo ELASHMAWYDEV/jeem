@@ -1,15 +1,20 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-import "swiper/swiper-bundle.min.css";
+import { useTranslation } from "react-i18next";
 
 //Styles
 import "../styles/RecommendedSlider.scss";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper-bundle.css";
 
 //Assets
+// @ts-ignore
 import SliderImage3 from "../assets/img/slider1-2.jpeg";
+// @ts-ignore
 import NextImage from "../assets/img/next.png";
 
 const RecommendedSlider = () => {
+  const { t, i18n } = useTranslation("translations");
+
   let slides = [];
 
   for (let i = 0; i <= 15; i++) {
@@ -21,13 +26,8 @@ const RecommendedSlider = () => {
               <img src={SliderImage3} alt="slider" />
             </div>
             <div className="content">
-              <h2>Title goes here</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                nisl eros, pulvinar facilisis justo mollis, auctor consequat
-                urna. Morbi a bibendum metus. Donec scelerisque sollicitudin
-                enim eu venenatis.
-              </p>
+              <h2>{t("PRODUCT_TITLE")}</h2>
+              <p>{t("LOREM_IPSUM")}</p>
             </div>
             <div className="footer">
               <p>775 SAR</p>
@@ -55,13 +55,14 @@ const RecommendedSlider = () => {
           nextEl: ".prev",
         }}
         pagination
+        dir={i18n.dir()}
       >
         {slides}
         <div className="prev">
-          <img src={NextImage} alt="prev"/>
+          <img src={NextImage} alt="prev" />
         </div>
         <div className="next">
-          <img src={NextImage} alt="next"/>
+          <img src={NextImage} alt="next" />
         </div>
       </Swiper>
     </div>

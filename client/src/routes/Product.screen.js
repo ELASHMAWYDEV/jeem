@@ -5,6 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from "swiper";
 import { IoMdStar } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 //Components
 import {
@@ -20,11 +21,14 @@ import "../styles/Product.screen.scss";
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 
+// @ts-ignore
 import ProductImage from "../assets/img/subcategory-img.png";
 
 SwiperCore.use([Pagination]);
 
 const Product = () => {
+  const { t, i18n } = useTranslation("translations");
+
   const [quantity, setQuantity] = useState(1);
 
   return (
@@ -34,15 +38,15 @@ const Product = () => {
       <div className="product-container">
         <div className="product-header">
           <Link to="/category">
-            <h2>Turnkey Contractor</h2>
+            <h2>{t("SUBCATEGORY_TITLE")}</h2>
           </Link>
           <IoMdNavigate className="arrow-icon" />
           <Link to="/subcategory">
-            <h3>Gold Key</h3>
+            <h3>{t("SUBCATEGORY_TITLE")}</h3>
           </Link>
           <IoMdNavigate className="arrow-icon" />
           <Link to="/subcategory">
-            <h3>Carmela Hand</h3>
+            <h3>{t("PRODUCT_TITLE")}</h3>
           </Link>
         </div>
         <div className="product-box">
@@ -56,27 +60,17 @@ const Product = () => {
               <IoMdStar className="active" />
               <IoMdStar />
             </div>
-            <h1 className="product-title">Carmela Hand</h1>
-            <h5 className="mini-desc">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis
-            </h5>
-            <h3 className="semi-title">Product Description</h3>
+            <h1 className="product-title">{t("PRODUCT_TITLE")}</h1>
+            <h5 className="mini-desc">{t("LOREM_IPSUM")}</h5>
+            <h3 className="semi-title">{t("PRODUCT_DESCRIPTION")}</h3>
             <h4 className="product-desc">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est,
+              {t("LOREM_IPSUM")}
+              {t("LOREM_IPSUM")}
             </h4>
             <div className="product-footer">
               <div>
-                <h3 className="semi-title">Seller</h3>
-                <h4 className="seller">Jeem Building Solutions</h4>
+                <h3 className="semi-title">{t("SELLER")}</h3>
+                <h4 className="seller">{t("JEEM_BUILDING_SOLUTIONS")}</h4>
               </div>
               <div className="quantity-container">
                 <button
@@ -94,7 +88,7 @@ const Product = () => {
                 </button>
               </div>
               <button className="cart-btn">
-                Add to cart <FaShoppingCart />
+                {t("ADD_TO_CART")} <FaShoppingCart />
               </button>
             </div>
           </div>
@@ -118,7 +112,7 @@ const Product = () => {
 
         <div className="product-page-footer">
           <div className="reviews-container">
-            <h2>Reviews</h2>
+            <h2>{t("REVIEWS")}</h2>
             <ReviewItem />
             <ReviewItem />
             <ReviewItem />
@@ -127,7 +121,7 @@ const Product = () => {
             <ReviewItem />
           </div>
           <div className="similar-container">
-            <h2>Similar Products</h2>
+            <h2>{t("SIMILAR_PRODUCTS")}</h2>
             <SubCategoryItem />
             <SubCategoryItem />
             <SubCategoryItem />

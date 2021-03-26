@@ -22,9 +22,11 @@ const Home = () => {
       <div className="home">
         <LongSlider />
         <CircleButtons />
-        <div className="dash-line" />
+        <div className="dash-line" style={{ marginTop: 0 }} />
         {/* <RecommendedSlider /> */}
         <div className="tab-sliders-wrapper">
+          <TabSlider />
+          <TabSlider />
           <TabSlider />
           <TabSlider />
           <TabSlider />
@@ -38,7 +40,6 @@ const Home = () => {
         <RectSlider />
         <div className="dash-line" />
         <div className="tab-sliders-wrapper">
-          <TabSlider />
           <TabSlider />
           <TabSlider />
           <TabSlider />

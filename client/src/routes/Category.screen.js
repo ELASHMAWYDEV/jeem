@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 //Styles
@@ -7,6 +8,7 @@ import "../styles/Category.screen.scss";
 import { Header, Footer, Loading, CategoryItem } from "../components/index";
 
 const Category = () => {
+  const { t, i18n } = useTranslation("translations");
   return (
     <>
       <Loading />
@@ -14,7 +16,7 @@ const Category = () => {
       <div className="category-container">
         <div className="category-header">
           <Link to="/category">
-            <h2>Turnkey Contractor</h2>
+            <h2>{t("CATEGORY_TITLE")}</h2>
           </Link>
         </div>
         <div className="categories-container">

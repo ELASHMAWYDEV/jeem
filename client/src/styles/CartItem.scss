@@ -16,8 +16,12 @@
     }
   }
   .product-content {
-    margin-left: 20px;
+    margin-inline-start: 20px;
     width: 40%;
+    max-height: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 30px;
   }
   .price,
   .quantity-container,
@@ -45,10 +49,10 @@
       outline: none;
       cursor: pointer;
       &:nth-child(1) {
-        margin-right: 10px;
+        margin-inline-end: 10px;
       }
       &.plus {
-        margin-left: 10px;
+        margin-inline-start: 10px;
       }
       &:hover {
         opacity: 0.95;
@@ -115,13 +119,12 @@
     .product-content {
       flex-basis: 100%;
     }
-
   }
   /*******************************/
   @include media(phone-lg) {
     justify-content: space-around;
     & > div {
-      order: 1
+      order: 1;
     }
     .subtotal {
       order: 2;

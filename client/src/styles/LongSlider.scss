@@ -10,6 +10,12 @@
         height: 400px;
       }
     }
+    .swiper-pagination-bullet {
+      background-color: $lightGray;
+      &-active {
+        background-color: $white;
+      }
+    }
 
     .next-img,
     .prev-img {
@@ -38,7 +44,7 @@
       width: 100%;
       height: 100%;
       z-index: 2;
-      background-color: rgba($color: $primary, $alpha: 0.6);
+      background-color: rgba($color: $primary, $alpha: 0.9);
     }
     a {
       position: relative;
@@ -55,7 +61,12 @@
       max-width: 80%;
       color: $white;
       h1 {
-        font-size: 40px;
+        font-size: 30px;
+      }
+      p {
+        max-height: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
     img {
