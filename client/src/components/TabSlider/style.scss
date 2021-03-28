@@ -1,0 +1,102 @@
+@import "../../styles/global";
+
+.tab-slider-container {
+  width: auto;
+  background: linear-gradient(-90deg, $secondary -10%, $primary 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  .slider-container {
+    width: 100%;
+    overflow: unset;
+    .subcategory-item-container {
+      background: transparent;
+      box-shadow: none;
+      overflow: unset;
+      &:hover {
+        transform: none;
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+      .price {
+        border-radius: 0;
+      }
+      .img-container {
+        border-radius: 0 12px 0 12px;
+        overflow: hidden;
+      }
+    }
+    .swiper-pagination {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: -40px;
+      z-index: 5;
+      left: 35%;
+      width: 60%;
+      .tabs-slider-tab {
+        margin-inline-end: 20px;
+        &:nth-child(1) {
+          margin-inline-end: 0px;
+        }
+        cursor: pointer;
+        flex: 1;
+        max-width: 70px;
+        min-width: 10px;
+        height: 15px;
+        background-color: transparent;
+        border: 2px solid $white;
+        &-active {
+          background-color: $white;
+        }
+      }
+    }
+  }
+  .slider-footer {
+    height: 70px;
+    padding: 10px 30px;
+    & > h2 {
+      color: $white;
+    }
+  }
+
+  /****************************/
+  @include media(desktop-lg) {
+  }
+  /****************************/
+  @include media(desktop-sm) {
+  }
+  /****************************/
+  @include media(tablet-lg) {
+  }
+  /****************************/
+  @include media(tablet-sm) {
+    .slider-container {
+      .swiper-pagination {
+        width: 90%;
+
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+      }
+    }
+    .slider-footer {
+      margin-top: 30px;
+      & > h2 {
+        text-align: center;
+      }
+    }
+  }
+  /****************************/
+  @include media(phone-lg) {
+    .slider-container {
+      .subcategory-item-container {
+        .img-container {
+          border-radius: 12px 12px 0 0;
+        }
+      }
+    }
+  }
+  @include media(phone-sm) {
+  }
+}

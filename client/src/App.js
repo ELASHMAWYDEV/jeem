@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { ColorPicker } from "./components";
 
 //Styles
-import "./styles/App.scss";
+import "./style.scss";
 import "./styles/rtl.scss";
 
 //Routes
