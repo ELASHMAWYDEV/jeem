@@ -7,3 +7,4 @@ export { default as MyAccount } from "./MyAccount/MyAccount.screen";
 export { default as Auth } from "./Auth/Auth.screen";
 export { default as Orders } from "./Orders/Orders.screen";
 export { default as Seller } from "./Seller/Seller.screen";
+export { default as Checkout } from "./Checkout/Checkout.screen";

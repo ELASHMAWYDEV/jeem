@@ -19,7 +19,7 @@
     overflow: hidden;
   }
   .left-rect {
-    background-color: $primary;
+    background-color:rgba($primary, 1);
     animation: goLeft 1.5s 1.5s 1 ease;
   }
   .right-rect {

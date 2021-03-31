@@ -17,8 +17,8 @@
   }
   .product-content {
     margin-inline-start: 20px;
-    width: 40%;
     max-height: 150px;
+    width: 35%;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 30px;
@@ -26,16 +26,31 @@
   .price,
   .quantity-container,
   .subtotal,
-  .delete-container {
+  .delete-container,
+  .nego-price {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 10%;
   }
+  .nego-price {
+    & input {
+      text-align: center;
+      font-size: 16px;
+      display: inline-block;
+      width: 70px;
+      outline: none;
+      border-radius: 30px;
+      border: 1px solid rgba($primary, 1);
+      &:focus {
+        border: 1px solid rgba($secondary, 1);
+      }
+    }
+  }
   .quantity-container {
     button {
-      background-color: $primary;
+      background-color: rgba($primary, 1);
       border: none;
       width: 35px;
       height: 35px;

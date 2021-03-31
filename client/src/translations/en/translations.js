@@ -24,7 +24,7 @@ const TRANSLATION_EN = {
   COPYRIGHT: "Copyright © 2020 Jeem Building Solutions",
   PRIVACY_POLICY: "Privacy Policy",
   TERMS_OF_SERVICES: "Terms of Services",
-  CHECKOUT: "Checkout",
+  GO_CHECKOUT: "Checkout",
   CONTINUE_SHOPPING: "Continue Shopping",
   MY_CART: "My Cart",
   TOTAL: "Total",
@@ -55,6 +55,8 @@ const TRANSLATION_EN = {
   YOU_REMEMBER_PASSWORD: "You remember the password already",
   SEND_LINK: "Send Link",
   SEND_RESET_LINK_TO_EMAIL: "We will send reset link to email",
+  CHEKOUT: "Checkout",
+  NEGO_PRICE: "Negotiation Price",
 };
 
 export default TRANSLATION_EN;

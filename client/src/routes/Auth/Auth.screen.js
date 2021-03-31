@@ -24,7 +24,10 @@ const Auth = () => {
 
   // const { isLoggedIn, setIsLoggedIn } = useAuthContext();
 
+
+  //auth
   const { path } = useRouteMatch();
+  console.log("path:", path);
   const location = useLocation();
   const history = useHistory();
   const [type, setType] = useState(

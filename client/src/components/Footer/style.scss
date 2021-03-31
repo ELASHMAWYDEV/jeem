@@ -31,23 +31,23 @@
           width: 50px;
           height: 50px;
           cursor: pointer;
-          color: $primary;
+          color:rgba($primary, 1);
           transition: 0.2s ease;
           background-color: $white;
           border-radius: 50%;
           padding: 5px;
           margin-inline-start: 30px;
           &:hover {
-            color: $secondary;
+            color: rgba($secondary, 1);
           }
           &.facebook {
             margin-inline-start: 0px;
             padding: 0px;
-            background-color: $primary;
+            background-color:rgba($primary, 1);
             background-size: 90%;
             color: $white;
             &:hover {
-              background-color: $secondary;
+              background-color: rgba($secondary, 1);
             }
           }
         }

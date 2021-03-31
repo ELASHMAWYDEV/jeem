@@ -59,7 +59,7 @@
     .price {
       right: unset;
       left: 0;
-      background: linear-gradient($gray -100%, $primary 100%);
+      background: linear-gradient($gray -100%,rgba($primary, 1) 100%);
       border-radius: 12px 0 12px 0;
     }
   }
@@ -115,7 +115,7 @@
         justify-content: center;
         gap: 15px;
         button {
-          background-color: $primary;
+          background-color:rgba($primary, 1);
           border: none;
           width: 35px;
           height: 35px;
@@ -183,7 +183,7 @@
       margin: 0 8px !important;
       box-shadow: 0px 0px 2px rgba($color: $black, $alpha: 0.5);
       &-active {
-        background-color: $primary;
+        background-color:rgba($primary, 1);
       }
     }
     img {
@@ -197,7 +197,7 @@
     margin-top: 30px;
     gap: 80px;
     & > div > h2 {
-      background-color: $primary;
+      background-color:rgba($primary, 1);
       border-radius: 25px;
       max-width: max-content;
       color: $white;

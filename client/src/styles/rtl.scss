@@ -30,7 +30,7 @@
         input {
           border-radius: 0 10px 10px 0;
           border-left: none;
-          border-right: 1.5px solid $primary;
+          border-right: 1.5px solid rgba($primary, 1);
         }
         button {
           border-radius: 10px 0 0 10px;

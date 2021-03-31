@@ -1,0 +1,126 @@
+@import "../../styles/global";
+
+.checkout-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & > h1 {
+    color: $gray;
+    margin-bottom: 30px;
+  }
+  .checkout-box {
+    width: 80%;
+    background-color: $white;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 2px solid rgba(109, 109, 109, 0.2);
+    padding: 15px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-header {
+    padding: 20px;
+    width: 100%;
+    .line-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .bar {
+        display: block;
+        height: 3px;
+        width: 250px;
+        background-color: $gray;
+        position: relative;
+        top: 8px;
+        &:nth-child(4) {
+          transform: translateX(-50%);
+        }
+        &.active {
+          background-color:rgba($primary, 1);
+        }
+      }
+      .circle-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        &:nth-child(1) {
+          transform: translateX(50%);
+        }
+        &:nth-child(3) {
+          transform: translateX(-50%);
+        }
+        &:nth-child(5) {
+          transform: translateX(-200%);
+        }
+        &.active {
+          & > span {
+            background-color:rgba($primary, 1);
+          }
+          p {
+            color:rgba($primary, 1);
+          }
+        }
+        & > span {
+          position: relative;
+          z-index: -1;
+          display: block;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: $gray;
+          margin-bottom: 7px;
+        }
+        & > p {
+          color: $gray;
+        }
+      }
+    }
+  }
+  .box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .box-title {
+      color: $gray;
+      font-size: 24px;
+      margin: 20px auto 40px;
+    }
+  }
+  .dash-line {
+    margin: 50px auto;
+    background-image: linear-gradient(
+      to right,
+     rgba($primary, 1) 55%,
+      rgba(255, 255, 255, 0) 50%
+    );
+    background-position: bottom;
+    background-size: 3% 2px;
+    background-repeat: repeat-x;
+    width: 95%;
+    height: 2px;
+  }
+  .next-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px auto;
+    a {
+      padding: 5px 50px;
+      color: $white;
+      border-radius: 8px;
+      background: linear-gradient(30deg,rgba($primary, 1) 60%, rgba($secondary, 1) 100%);
+      &:hover {
+        opacity: 0.9;
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}

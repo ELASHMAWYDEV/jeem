@@ -7,7 +7,7 @@
   position: relative;
   height: 260px;
   min-width: 50%;
-  background: linear-gradient(-90deg, $secondary -10%, $primary 100%);
+  background: linear-gradient(-90deg, rgba($secondary, 1) -10%,rgba($primary, 1) 100%);
   transition: 0.3s ease;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,7 @@
   .price {
     top: unset;
     bottom: 0;
-    background: linear-gradient($secondary -90%, $primary 100%);
+    background: linear-gradient(rgba($secondary, 1) -90%,rgba($primary, 1) 100%);
     border-radius: 12px 0 12px 0;
   }
   .img-container {

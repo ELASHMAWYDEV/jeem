@@ -20,6 +20,7 @@ import {
   Auth,
   Orders,
   Seller,
+  Checkout,
 } from "./routes/index";
 
 function App() {
@@ -36,12 +37,13 @@ function App() {
       window.location.reload();
     });
 
-    document.documentElement.style.setProperty("--primary", "#425978");
-    document.documentElement.style.setProperty("--secondary", "#01395e");
+    document.documentElement.style.setProperty("--primary", "66, 89, 120");
+    document.documentElement.style.setProperty("--secondary", "1, 57, 94");
     document.documentElement.style.setProperty(
       "--swiper-theme-color",
       "#425978"
     );
+
     console.log(
       getComputedStyle(document.documentElement).getPropertyValue("--primary")
     );
@@ -52,6 +54,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/cart" exact component={Cart} />
+        <Route path="/checkout" component={Checkout} />
         <Route path="/category" component={Category} />
         <Route path="/subcategory" component={SubCategory} />
         <Route path="/product" component={Product} />

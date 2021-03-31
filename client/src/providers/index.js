@@ -4,19 +4,29 @@ const AppContext = createContext(null);
 export const useAppContext = () => useContext(AppContext);
 
 export const AppProvider = ({ children }) => {
-  const [activeColor, setActiveColor] = useState("blue");
+  const [activeColor, setActiveColor] = useState("brown");
   const globalThemes = {
-    blue: { primary: "#425970", secondary: "rgba(1, 57, 94, 1)" },
-    red: { primary: "#425970", secondary: "rgba(1, 57, 94, 1)" },
-    green: { primary: "#425970", secondary: "rgba(1, 57, 94, 1)" },
-    black: { primary: "#425970", secondary: "rgba(1, 57, 94, 1)" },
+    blue: { primary: "66, 89, 120", secondary: "1, 57, 94" },
+    red: { primary: "235, 77, 75", secondary: "255, 121, 121" },
+    green: { primary: "106, 176, 76", secondary: "186, 220, 88" },
+    black: { primary: "47, 54, 64", secondary: "72, 80, 97" },
+    brown: { primary: "165, 109, 78", secondary: "213, 146, 109" },
   };
 
   useEffect(() => {
-    localStorage.setItem(
-      "primaryColor",
-      globalThemes[activeColor].primary || globalThemes.blue.primary
-    );
+    let activeColorStored = localStorage.getItem("activeColor");
+    if (activeColorStored) {
+    setActiveColor(activeColorStored);
+    }
+  }, []);
+
+  useEffect(() => {
+    const { primary, secondary } = globalThemes[activeColor];
+
+    localStorage.setItem("activeColor", activeColor);
+
+    document.documentElement.style.setProperty("--primary", primary);
+    document.documentElement.style.setProperty("--secondary", secondary);
   }, [activeColor]);
 
   return (

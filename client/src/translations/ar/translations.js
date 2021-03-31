@@ -24,7 +24,7 @@ const TRANSLATION_AR = {
   COPYRIGHT: "جميع الحقوق محفوظة © 2020 جيم لحلول البناء",
   PRIVACY_POLICY: "سياسة الخصوصية",
   TERMS_OF_SERVICES: "شروط الاستخدام",
-  CHECKOUT: "الذهاب للدفع",
+  GO_CHECKOUT: "الذهاب للدفع",
   CONTINUE_SHOPPING: "استمر في التسوق",
   MY_CART: "سلة الشراء",
   TOTAL: "المجموع",
@@ -55,6 +55,8 @@ const TRANSLATION_AR = {
   YOU_REMEMBER_PASSWORD: "لقد تذكرت كلمة المرور",
   SEND_LINK: "ارسال الرابط",
   SEND_RESET_LINK_TO_EMAIL: "سوف نرسل رابط استعادة كلمة المرور الي حسابك",
+  CHEKOUT: "الدفع",
+  NEGO_PRICE: "سعر التفاوض",
 };
 
 export default TRANSLATION_AR;

@@ -49,7 +49,7 @@
     padding: 12px;
     cursor: default;
     padding-bottom: 4px;
-    border-bottom: 2px solid $primary;
+    border-bottom: 2px solid rgba($primary, 1);
     .notification-txt {
       color: $gray;
       font-size: 18px;

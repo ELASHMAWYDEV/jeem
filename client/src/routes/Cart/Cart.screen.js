@@ -31,27 +31,33 @@ const MyCart = () => {
       <div className="cart-container">
         <h1>{t("MY_CART")}</h1>
         <div className="cart-box">
-          <div className="cart-content">
+          <table className="cart-content">
             {/* <div> */}
-            <div className="cart-header">
-              <h3>{t("PRODUCT")}</h3>
-              <h3>{t("PRICE")}</h3>
-              <h3>{t("NEGO_PRICE")}</h3>
-              <h3>{t("QUANTITY")}</h3>
-              <h3>{t("SUBTOTAL")}</h3>
-            </div>
-            <span className="line-separator"></span>
-            {items.map((item, i) => (
-              <CartItem
-                key={i}
-                onDelete={() => {
-                  let newItems = items.filter((j) => j.id != item.id);
-                  setItems(newItems);
-                }}
-              />
-            ))}
+            <thead className="cart-header">
+              <tr>
+                <th colSpan={2}>{t("PRODUCT")}</th>
+                <th>{t("PRICE")}</th>
+                <th>{t("NEGO_PRICE")}</th>
+                <th>{t("QUANTITY")}</th>
+                <th>{t("SUBTOTAL")}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colSpan={10} className="line-separator"></td>
+              </tr>
+              {items.map((item, i) => (
+                <CartItem
+                  key={i}
+                  onDelete={() => {
+                    let newItems = items.filter((j) => j.id != item.id);
+                    setItems(newItems);
+                  }}
+                />
+              ))}
+            </tbody>
             {/* </div> */}
-          </div>
+          </table>
           <span className="line-separator"></span>
           <div className="cart-footer">
             <Link to="/" className="continue-shopping">
@@ -62,7 +68,7 @@ const MyCart = () => {
               <h3>{t("TOTAL")}</h3>
               <h4>$25.00</h4>
             </div>
-            <Link to="/" className="checkout-btn">
+            <Link to="/checkout" className="checkout-btn">
               {t("CHECKOUT")}
               <span></span>
             </Link>

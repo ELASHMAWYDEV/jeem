@@ -1,0 +1,56 @@
+@import "../../../../styles/global";
+
+.choose-address-container {
+  width: 100%;
+
+  .address-book {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+  }
+  .address-box {
+    margin-inline-end: 50px;
+
+    label {
+      max-width: 300px;
+      display: flex;
+      input {
+        position: relative;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+
+  .address-form {
+    max-width: 95%;
+    width: 500px;
+    margin: auto;
+    & > h2 {
+      font-weight: 500;
+      color: $gray;
+      text-align: center;
+    }
+    .input-items {
+      width: 100%;
+      padding: 20px 30px;
+      .input-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+        input {
+          @include Input;
+        }
+        .save-btn {
+          @include Button;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+        }
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@
   background-color: $white;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   position: fixed;
-  top:0;
+  top: 0;
   z-index: 100;
   width: 100%;
   .logo-container {
@@ -83,7 +83,7 @@
     transition: 0.2s ease;
     transform: scale(0.9);
     &:hover {
-      background-color: $secondary;
+      background-color: rgba($secondary, 1);
     }
     &:active {
       transform: scale(0.9);
@@ -204,7 +204,7 @@
           padding: 7px;
 
           &:hover {
-            background-color: $primary;
+            background-color: rgba($primary, 1);
           }
         }
       }
@@ -265,7 +265,7 @@
       display: flex;
       align-items: center;
       input {
-        border: 1.5px solid $primary;
+        border: 1.5px solid rgba($primary, 1);
         border-right: none;
         border-radius: 10px 0 0 10px;
         font-size: 16px;
@@ -304,7 +304,7 @@
     order: 6;
     width: 55px;
     height: 45px;
-    border: 2px solid $primary;
+    border: 2px solid rgba($primary, 1);
     border-radius: 8px;
     flex-direction: column;
     justify-content: space-evenly;
@@ -325,7 +325,7 @@
       background: $white;
       box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
       svg {
-        color: $primary;
+        color: rgba($primary, 1);
       }
     }
     &:active {
@@ -372,7 +372,7 @@
         //   left: 100%;
         //   width: 0;
         //   border: 10px solid transparent;
-        //   border-bottom-color: $primary;
+        //   border-bottom-color:rgba($primary, 1);
         //   z-index: -1;
         //   filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.3));
         // }
@@ -409,7 +409,7 @@
       //   top: -20px;
       //   right: 25px;
       //   border: 10px solid transparent;
-      //   border-bottom-color: $primary;
+      //   border-bottom-color:rgba($primary, 1);
       //   z-index: -1;
       //   filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.3));
       // }
