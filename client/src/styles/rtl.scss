@@ -155,4 +155,77 @@
       }
     }
   }
+
+  /*************************/
+
+  //Checkout screen
+  .checkout-container {
+    .box-header {
+      .line-container {
+        .bar {
+          &:nth-child(4) {
+            transform: translateX(25%);
+          }
+          &:nth-child(2) {
+            transform: translateX(-25%);
+          }
+        }
+        .circle-container {
+          &:nth-child(1) {
+            transform: translateX(-100%);
+          }
+          &:nth-child(3) {
+            transform: translateX(0%);
+          }
+          &:nth-child(5) {
+            transform: translateX(125%);
+          }
+        }
+      }
+    }
+  }
+  /*************************/
+  //ChooseAddress
+  .choose-address-container {
+    .address-box {
+      label {
+        input {
+          right: unset;
+          left: 10px;
+        }
+      }
+    }
+  }
+  /*************************/
+  //ChooseMethod
+  .choose-method-container {
+    .method-box {
+      label {
+        input {
+          right: unset;
+          left: 10px;
+        }
+      }
+    }
+  }
+  /*************************/
+  //ReviewOrder
+  .review-order-container {
+    .review-order-footer {
+      .continue-shopping {
+        span {
+          right: 5px;
+          left: unset;
+          transform: translateY(-50%) scale(0.7) rotate(180deg);
+        }
+      }
+      .checkout-btn {
+        span {
+          left: 5px;
+          right: unset;
+          transform: translateY(-50%) scale(0.7) rotate(180deg);
+        }
+      }
+    }
+  }
 }

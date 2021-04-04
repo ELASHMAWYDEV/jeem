@@ -29,9 +29,9 @@ function App() {
   useEffect(() => {
     //Localization
     document.dir = i18n.dir(i18n.language);
-    if (i18n.language == "ar")
+    if (i18n.language == "ar") {
       document.getElementsByTagName("body")[0].classList.add("rtl-layout");
-    else
+    } else
       document.getElementsByTagName("body")[0].classList.remove("rtl-layout");
     i18n.on("languageChanged", (lang) => {
       window.location.reload();

@@ -112,11 +112,12 @@ $red: #ff5e57;
   padding: 7px 30px;
   color: $white;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 16px;
   align-self: center;
-  margin: 15px;
+  margin: 15px auto;
   cursor: pointer;
   transition: 0.2s ease;
+  white-space: nowrap;
   &:hover {
     background-color:rgba($primary, 1);
   }

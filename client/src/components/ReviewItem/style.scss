@@ -1,7 +1,10 @@
 @import "../../styles/global";
 
 .review-item-container {
-  border-radius: 100px 12px 12px 100px;
+  border-start-start-radius: 120px;
+  border-end-start-radius: 120px;
+  border-start-end-radius: 12px;
+  border-end-end-radius: 12px;
   box-shadow: 0px 2px 10px rgba($color: $black, $alpha: 0.2);
   background-color: $white;
   display: flex;
